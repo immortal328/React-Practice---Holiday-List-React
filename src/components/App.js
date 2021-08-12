@@ -1,5 +1,4 @@
 
-import '../styles/App.css';
 import React, { Component } from "react";
 
 class App extends Component {
@@ -12,15 +11,14 @@ class App extends Component {
       { name: "New York", country: "USA" },
       { name: "Darjeeling", country: "India" },
       { name: "Tokyo", country: "Japan" },
-      { name: "Lonavala", country: "India"
-    ];
-    this.list = this.cityList.filter((ap) => ap.country === "India");
+      { name: "Lonavala", country: "India"}
+    ]
   }
   render() {
     return (
       <div id="main">
         <ol>
-          {this.list.map((ap, i) => (<li key={"location" + (i + 1)}>{ap.name}</li>))}
+          {this.cityList.filter((ap) => ap.country === "India").map((ap, i) => (<li key={"location" + (i + 1)}>{ap.name}</li>))}
         </ol>
       </div>
     );
